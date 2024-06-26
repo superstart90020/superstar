@@ -1,0 +1,236 @@
+/* Start Global Rules */
+:root{
+    --main-backgraound-color:#f6f6f6;
+    --main-transiton-time:0.5s;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Work Sans", sans-serif;
+    background-color: var(--main-backgraound-color);
+  }
+ .content {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+   .content {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+   .content {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+   .content {
+      width: 1170px;
+    }
+}
+.custome-hiding{
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bolder;
+}
+/*End Global Rules */
+/*Start header */
+.header{
+    background-color: var(--main-backgraound-color);
+    box-shadow: 0 0 20px #000;
+
+}
+.header .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.header .content .links a{
+    font-size: 28px;
+    color: black;
+    transition: var(--main-transiton-time);
+}
+
+.header .content .links a:hover{
+    color: #4267B2;
+}
+/*End header*/
+/*landing */
+.landing {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, #f1f1f1, #ccc);
+    }
+    
+    .landing .container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    }
+    
+    .landing .container .text {
+    text-align: center;
+    }
+    
+    .landing .container .text h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    text-shadow: 2px 2px #fff;
+    }
+    
+    .landing .container .text p {
+    font-size: 18px;
+    color: #666;
+    }
+    
+    /*animations*/
+    .landing {
+    animation: fadeIn 1s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+    }
+    
+    .landing .container.text h2 {
+    animation: slideIn 1s ease-in-out;
+    }
+    
+    @keyframes slideIn {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    }
+    
+    .landing .container.text p {
+    animation: slideIn 1s ease-in-out 0.5s;
+    }
+    
+    @keyframes slideIn {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    }
+    
+    /*landing End*/
+/*Start about*/
+.about{
+    padding: 20px 30px;
+    margin-top: 0px;
+    background-color: #fff;
+}
+.about .content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.about.content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.10;
+}
+/*End about*/
+/*Start Service*/
+.Service .content{
+    padding: 30px;
+    padding: 20px 30px;
+}
+.Service .content .serv-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 40px;
+}
+.Service .content .serv-box .box{
+    background-color: #fff;
+    padding: 20px 30px;
+    text-align: center;
+    transition: var(--main-transiton-time);
+}
+.Service .content .serv-box .box:hover{
+    margin-top: -10px;
+    box-shadow:  0 0 30px black;
+}
+.Service .content .serv-box .box:nth-child(2){
+    box-shadow: 0 0 20px black;
+}
+.Service .content .serv-box .box i {
+    font-size: 3rem;
+    color: #555;
+}
+.Service .content .serv-box .box h2{
+    font-size: 21px;
+    width: 100%;
+}
+.Service .content .serv-box .box p {
+    line-height: 1.7;
+}
+/*End Service*/
+/*Start offers */
+.offers{
+    background-color: #fff;
+}
+.offers .content .offers-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.offers .content .offers-box .offer-card{
+    background-color: var(--main-backgraound-color);
+    transition: var(--main-transiton-time);
+    box-shadow:  0 0 15px black;
+    padding: 40px;
+    margin: 30px;
+    border-radius: 5%;
+}
+.offers .content .offers-box .offer-card:hover{
+    box-shadow:  0 0 25px black;
+}
+.offers .content .offers-box .offer-card h3{
+    text-align: center;
+    font-size: 25px;
+}
+.offers .content .offers-box .offer-card .Advantages .flex-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+}
+.offers .content .offers-box .offer-card .Advantages .flex-box:last-child{
+    border: none;
+}
+/*End offers*/
