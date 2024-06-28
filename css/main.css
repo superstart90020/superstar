@@ -45,6 +45,11 @@
     text-align: center;
     font-weight: bolder;
 }
+.flex-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 /*End Global Rules */
 /*Start header */
 .header{
@@ -58,15 +63,6 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-}
-.header .content .links a{
-    font-size: 28px;
-    color: black;
-    transition: var(--main-transiton-time);
-}
-
-.header .content .links a:hover{
-    color: #4267B2;
 }
 /*End header*/
 /*landing */
@@ -204,10 +200,9 @@
     background-color: #fff;
 }
 .offers .content .offers-box{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 40px;
 }
 .offers .content .offers-box .offer-card{
     background-color: var(--main-backgraound-color);
@@ -222,7 +217,7 @@
 }
 .offers .content .offers-box .offer-card h3{
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
 }
 .offers .content .offers-box .offer-card .Advantages .flex-box{
     display: flex;
@@ -230,7 +225,45 @@
     justify-content: space-between;
     border-bottom: 1px solid #333;
 }
+.offers .content .offers-box .offer-card .Advantages h4{
+    text-align: center;
+    font-size: 20px;
+}
 .offers .content .offers-box .offer-card .Advantages .flex-box:last-child{
     border: none;
 }
 /*End offers*/
+/*Start Connect-with-us */
+.Connect-with-us{
+    padding: 30px 20px;
+}
+.Connect-with-us .content .Connect-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+.Connect-with-us .content .Connect-box .card{
+    background-color: #fff;
+    padding: 40px;
+    margin: 30px;
+    border-radius: 5%;
+    text-align: center;
+    transition: var(--main-transiton-time);
+}
+.Connect-with-us .content .Connect-box .card:hover{
+    box-shadow: 0 0 30px gold;
+}
+.Connect-with-us .content .Connect-box .card h2{
+    font-size: 25px;
+}
+.Connect-with-us .content .Connect-box .card a{
+    text-align: center;
+    color: #000;
+    font-size: 60px;
+    transition: var(--main-transiton-time);
+}
+.Connect-with-us .content .Connect-box .card a:hover{
+    color: #4267B2;
+}
+/*End Connect-with-us */
